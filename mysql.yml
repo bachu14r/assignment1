@@ -1,0 +1,14 @@
+---
+- hosts: local
+  become: yes
+  roles: 
+    - ansible-mysql
+  vars:
+  mariadb_origin: 'upstream'
+  mariadb_users:
+    - name: 'demo'
+      password: 'demo123'
+      priv: lorem.*:ALL
+      host: 'localhost'
+  mariadb_databases:
+    name: demo

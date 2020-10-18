@@ -1,0 +1,8 @@
+---
+- hosts: local
+  become: yes
+  roles:
+   - rabbitmq
+  vars:
+  rabbitmq_cluster_master: node-1
+  
